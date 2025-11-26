@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Umasankar Vedala — DevOps & SRE</title>
+  <meta name="description" content="Umasankar (Bobby) Vedala — DevOps & Site Reliability Engineer: Kubernetes, Terraform, CI/CD, Cloud." />
+
+  <!-- Tailwind CDN (no build step) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Simple color/tailwind config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6C5CE7',
+            accent: '#00D1FF',
+            bg: '#0B1020',
+            surface: '#0f1724'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* small bespoke styles */
+    body { background: linear-gradient(180deg, #071021 0%, #081426 60%); color: #E6EEF3; }
+    .glass { background: rgba(255,255,255,0.03); backdrop-filter: blur(6px); border: 1px solid rgba(255,255,255,0.04); }
+    .accent-underline { background: linear-gradient(90deg, rgba(108,92,231,1), rgba(0,209,255,1)); -webkit-background-clip:text; -webkit-text-fill-color:transparent; }
+    .fade-up { transform: translateY(10px); opacity:0; transition: all .6s ease; }
+    .fade-up.visible { transform: translateY(0); opacity:1; }
+  </style>
+</head>
+<body class="antialiased font-sans">
+
+  <main class="max-w-5xl mx-auto p-6">
+
+    <!-- HERO -->
+    <header class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center py-10">
+      <div class="col-span-2">
+        <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Umasankar (Bobby) Vedala</h1>
+        <p class="mt-2 text-xl text-slate-300">DevOps & Site Reliability Engineer — Cloud | Kubernetes | Terraform | CI/CD</p>
+
+        <div class="mt-6 flex flex-col sm:flex-row sm:items-center sm:space-x-4 gap-3">
+          <a href="mailto:uma.vedala09@gmail.com" class="inline-block px-5 py-3 glass rounded-md text-sm">Email: uma.vedala09@gmail.com</a>
+          <a href="#" id="githubLink" class="inline-block px-5 py-3 bg-gradient-to-r from-primary to-accent rounded-md text-sm">GitHub</a>
+          <a href="#" id="linkedInLink" class="inline-block px-5 py-3 border border-white/10 rounded-md text-sm">LinkedIn</a>
+        </div>
+
+        <div class="mt-6 text-slate-400">
+          <strong class="text-slate-100">Why hire me:</strong>
+          <ul class="list-disc ml-5 mt-2 space-y-1">
+            <li>Design and automate multi-cloud infrastructure using Terraform</li>
+            <li>Build end-to-end CI/CD pipelines with Jenkins & GitHub Actions</li>
+            <li>Containerize & deploy productions workloads to GKE/AKS with Helm</li>
+            <li>Implement observability, SLIs/SLOs and automated remediation</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Right column — quick stats / photo placeholder -->
+      <aside class="glass rounded-md p-4 flex flex-col gap-3 items-start">
+        <div class="text-sm text-slate-300">Location</div>
+        <div class="font-semibold">Hyderabad, India</div>
+
+        <div class="mt-3 text-sm text-slate-300">Experience</div>
+        <div class="font-semibold">Cloud & DevOps (Projects & SRE)</div>
+
+        <div class="mt-4 w-full">
+          <div class="text-slate-300 text-xs">Certifications</div>
+          <div class="mt-1 text-sm">AWS Solutions Architect • Docker Foundations • Python</div>
+        </div>
+      </aside>
+    </header>
+
+    <div class="my-6 border-t border-white/5"></div>
+
+    <!-- SKILLS -->
+    <section id="skills" class="mb-10">
+      <h2 class="text-2xl font-bold">Skills</h2>
+      <p class="mt-2 text-slate-300">Cloud, Containers, CI/CD, IaC, Observability, Scripting</p>
+
+      <div class="mt-4 flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">AWS</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Azure</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">GCP</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Kubernetes</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Terraform</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Docker</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Jenkins</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">GitHub Actions</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Helm</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Grafana</span>
+        <span class="px-3 py-1 bg-white/5 rounded-full text-sm">Python</span>
+      </div>
+    </section>
+
+    <div class="my-6 border-t border-white/5"></div>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="mb-16">
+      <h2 class="text-2xl font-bold">Featured Projects</h2>
+      <p class="mt-2 text-slate-300">Selected work: cloud architecture, CI/CD automation, monitoring and reliability.</p>
+
+      <!-- Project cards grid -->
+      <div class="mt-6 grid gap-6 md:grid-cols-2">
+        <!-- AetherKube -->
+        <article class="glass rounded-lg p-4 overflow-hidden">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">AetherKube — Azure + AKS + Terraform</h3>
+              <p class="mt-2 text-sm text-slate-300">Built full Azure infra using Terraform (AKS, ACR, VNet). Automated CI/CD via GitHub Actions and Helm deployments to AKS. Integrated Azure Monitor for logging & metrics.</p>
+
+              <ul class="mt-3 text-sm text-slate-300 list-disc ml-5">
+                <li>Terraform remote backend & AKS Autopilot</li>
+                <li>Helm charts & multi-environment deployments</li>
+                <li>CI: build → push → deploy via GitHub Actions</li>
+              </ul>
+
+              <div class="mt-4 flex gap-3">
+                <a class="px-3 py-2 text-sm bg-gradient-to-r from-primary to-accent rounded-md" href="#">Repository</a>
+                <a class="px-3 py-2 text-sm border rounded-md" href="#">Docs</a>
+              </div>
+            </div>
+
+            <div class="w-40 flex-shrink-0">
+              <img src="assets/aetherkube.png" alt="AetherKube" class="rounded-md object-cover w-full h-24" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Kairoz -->
+        <article class="glass rounded-lg p-4 overflow-hidden">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Kairoz — Jenkins CI/CD to GKE Autopilot</h3>
+              <p class="mt-2 text-sm text-slate-300">End-to-end pipeline using Jenkins (EC2), Docker, Artifact Registry and GKE Autopilot. Jenkins builds images, pushes to GCR and deploys to GKE using kubectl. Final status: stable pods and automated CI/CD.</p>
+
+              <ul class="mt-3 text-sm text-slate-300 list-disc ml-5">
+                <li>Jenkins on EC2 orchestrates builds and deployments</li>
+                <li>GCR / GKE Autopilot for production workloads</li>
+                <li>Image permissions and IAM roles properly configured</li>
+              </ul>
+
+              <div class="mt-4 flex gap-3">
+                <a class="px-3 py-2 text-sm bg-gradient-to-r from-primary to-accent rounded-md" href="#">Repository</a>
+                <a class="px-3 py-2 text-sm border rounded-md" href="#">Readme</a>
+              </div>
+            </div>
+
+            <div class="w-40 flex-shrink-0">
+              <img src="assets/kairoz.png" alt="Kairoz architecture" class="rounded-md object-cover w-full h-24" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Skydock -->
+        <article class="glass rounded-lg p-4 overflow-hidden">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Skydock — Real-Time Cloud Monitoring Dashboard</h3>
+              <p class="mt-2 text-sm text-slate-300">Flask backend, AWS CloudWatch integration, S3 frontend hosting and GitHub Actions for CI/CD — a real-time monitoring and visualization platform.</p>
+
+              <div class="mt-4 flex gap-3">
+                <a class="px-3 py-2 text-sm bg-gradient-to-r from-primary to-accent rounded-md" href="#">Repository</a>
+              </div>
+            </div>
+            <div class="w-40 flex-shrink-0">
+              <img src="assets/skydock.png" alt="Skydock" class="rounded-md object-cover w-full h-24" />
+            </div>
+          </div>
+        </article>
+
+        <!-- Orpheus -->
+        <article class="glass rounded-lg p-4 overflow-hidden">
+          <div class="flex gap-4">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Orpheus — AI-powered Log Anomaly Detection</h3>
+              <p class="mt-2 text-sm text-slate-300">Detects anomalies from CloudWatch logs, integrates with Grafana and suggests automated remediation steps—improves MTTR and system resilience.</p>
+              <div class="mt-4 flex gap-3">
+                <a class="px-3 py-2 text-sm bg-gradient-to-r from-primary to-accent rounded-md" href="#">Repository</a>
+              </div>
+            </div>
+            <div class="w-40 flex-shrink-0">
+              <img src="assets/orpheus.png" alt="Orpheus" class="rounded-md object-cover w-full h-24" />
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="my-6 border-t border-white/5"></div>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="mb-16">
+      <h2 class="text-2xl font-bold">Experience</h2>
+
+      <div class="mt-6 space-y-6">
+        <div class="glass rounded-lg p-4">
+          <div class="flex justify-between">
+            <div>
+              <div class="text-sm text-slate-300">Data Analyst Intern — Oeson</div>
+              <div class="font-semibold">Apr 2023 - Jun 2023</div>
+            </div>
+            <div class="text-sm text-slate-300">Birmingham, UK</div>
+          </div>
+          <ul class="mt-3 ml-5 list-disc text-slate-300 text-sm">
+            <li>Automated data pipelines using Python, improving dashboard reporting efficiency by 20%.</li>
+            <li>Performed SQL validation and supported CI/CD process improvements.</li>
+          </ul>
+        </div>
+
+        <div class="glass rounded-lg p-4">
+          <div class="flex justify-between">
+            <div>
+              <div class="text-sm text-slate-300">Quality Analyst — Tata Consultancy Services</div>
+              <div class="font-semibold">Oct 2019 - Apr 2021</div>
+            </div>
+            <div class="text-sm text-slate-300">Hyderabad, India</div>
+          </div>
+          <ul class="mt-3 ml-5 list-disc text-slate-300 text-sm">
+            <li>Maintained 100% quality results for three consecutive months.</li>
+            <li>Ensured compliance and supported SLA performance.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="my-6 border-t border-white/5"></div>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mb-24 text-center">
+      <h2 class="text-2xl font-bold">Contact</h2>
+      <p class="mt-3 text-slate-300">Email: <a href="mailto:uma.vedala09@gmail.com" class="text-accent-400">uma.vedala09@gmail.com</a> • Phone: +91 93903 13075</p>
+      <p class="mt-2 text-slate-400">GitHub • LinkedIn</p>
+      <div class="mt-6 text-xs text-slate-500">Built with a Tailwind gradient template — deploy on Vercel</div>
+    </section>
+
+  </main>
+
+  <script>
+    // Little animation: reveal on scroll
+    function reveal() {
+      document.querySelectorAll('.fade-up').forEach(el => {
+        const r = el.getBoundingClientRect();
+        if (r.top < window.innerHeight - 40) el.classList.add('visible');
+      });
+    }
+    window.addEventListener('scroll', reveal);
+    window.addEventListener('load', reveal);
+
+    // Replace social links with your links after deploy or edit before deploy
+    document.getElementById('githubLink').href = 'https://github.com/Vedalau99';
+    document.getElementById('linkedInLink').href = 'https://www.linkedin.com/in/umasankar-vedala/';
+  </script>
+</body>
+</html>
