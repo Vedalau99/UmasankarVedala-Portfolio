@@ -131,9 +131,13 @@
         <article class="glass rounded-lg p-5 overflow-hidden">
           <h3 class="text-xl font-semibold">AetherKube – Azure + AKS + Terraform</h3>
           
-          <div class="mt-4 mb-4">
-            <img id="aetherkube-img" alt="AetherKube Architecture" class="rounded-md object-contain w-full max-h-96 cursor-pointer hover:opacity-90 transition-opacity" onclick="window.open(this.src, '_blank')" />
-          </div>
+         <!-- Aetherkube Architecture Diagram -->
+              <div class="mt-4 mb-4">
+                <img src="assets/Aetherkube.png"
+                     alt="Orpheus AI Log Anomaly Detection Architecture"
+                     class="rounded-md object-contain w-full max-h-96" />
+              </div>
+
 
           <p class="mt-3 text-sm text-slate-300">Built full Azure infrastructure using Terraform (remote backend, AKS, ACR, VNet, IAM). Automated CI/CD with GitHub Actions: Docker build → ACR push → Helm deployments to AKS. Used Helm for versioning, rollbacks, and multi-environment deployments.</p>
 
@@ -159,6 +163,13 @@
           </div>
 
           <p class="mt-3 text-sm text-slate-300">Developed a real-time dashboard to monitor AWS CloudWatch logs and metrics. Backend powered by Flask, containerized using Docker, and deployed via AWS App Runner. Frontend hosted on S3 and integrated with backend via API calls.</p>
+       
+          <!-- Skydock Architecture Diagram -->
+          <div class="mt-4 mb-4">
+            <img src="assets/Skydock.png"
+               alt="Skydock Architecture Diagram"
+               class="rounded-md object-contain w-full max-h-96" />
+          </div>
 
           <ul class="mt-3 text-sm text-slate-300 list-disc ml-5 space-y-1">
             <li>Flask backend containerized with Docker</li>
@@ -205,6 +216,13 @@
           </div>
 
           <p class="mt-3 text-sm text-slate-300">Developed an AI-enhanced cloud monitoring tool for detecting system anomalies in real-time using CloudWatch logs. Integrates with Grafana and AWS Lambda to visualize and respond to critical log patterns.</p>
+
+          <!-- Orpheus Architecture Diagram -->
+              <div class="mt-4 mb-4">
+                <img src="assets/Orpheus.png"
+                     alt="Orpheus AI Log Anomaly Detection Architecture"
+                     class="rounded-md object-contain w-full max-h-96" />
+              </div>
 
           <ul class="mt-3 text-sm text-slate-300 list-disc ml-5 space-y-1">
             <li>AI-powered anomaly detection from CloudWatch logs</li>
